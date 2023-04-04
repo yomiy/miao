@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input + label{
+            border: 3px solid #cbcbcb;
+            width: 270px;
+            height: 155px;
+            display: inline-block;
+            border-radius: 95px;
+            box-sizing: border-box;
+            transition: 0.6s;
+            position: relative;
+        }
+        input + label::before{
+            content: '';
+            height: 143px;
+            width: 143px;
+            background-color: white;
+            border-radius: 9999px;
+            position: absolute;
+            margin: 2px;
+            left: 0px;
+            display: block;
+            box-shadow: 0 5px 10px #999;
+            transition: 0.6s;
+        }
+        input:checked + label{
+            border-color: #30f349;
+            box-shadow: inset 15px 0 0 78px #30f349;
+        }
+        input:checked + label::before{
+            left: 120px;
+        }
+        input{
+            display: none;
+            /* 将框隐藏 */
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="abc">
+    <label for="abc"></label>
+    <!-- id和for不写，不能产生关联 -->
+</body>
+</html>
