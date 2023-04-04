@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input + label{
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid;
+        }
+
+        input:checked + label img{
+            margin-left: -2800px;
+            transition: 1s steps(28);
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="heart" hidden>
+    <label for="heart">
+        <img src="1_MTZW1G1mE7LSX1CnhTYeHA.png" alt="heart">
+    </label>
+
+</body>
+</html>
