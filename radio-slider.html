@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .main{
+        width: 570px;
+        height: 355px;
+        position: relative;
+        /* 让其成为其他元素的定位祖先 */
+        border: 1px solid bisque;
+        overflow: hidden;
+        margin: 200px auto;
+       }
+       input{
+        display: none;
+       }
+       img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        /* 透明度为0 */
+        transition: 1s;
+       }
+       input:nth-child(1):checked~.img img:nth-child(1){
+        opacity: 1;
+       }
+       /* 当input里的第一个元素被选中时，选中它下面的兄弟元素.img里的后代img里的第一个元素*/
+       input:nth-child(2):checked~.img img:nth-child(2){
+        opacity: 1;
+       }
+       input:nth-child(3):checked~.img img:nth-child(3){
+        opacity: 1;
+       }
+       input:nth-child(4):checked~.img img:nth-child(4){
+        opacity: 1;
+       }
+    
+       input:nth-child(1):checked~.box label:nth-child(1){
+        background-color: aqua;
+       }
+       input:nth-child(2):checked~.box label:nth-child(2){
+        background-color: aqua;
+       }
+       input:nth-child(3):checked~.box label:nth-child(3){
+        background-color: aqua;
+       }
+       input:nth-child(4):checked~.box label:nth-child(4){
+        background-color: aqua;
+       }
+       .box{
+        position: absolute;
+        left: 40%;
+        bottom:15%;
+        white-space: nowrap;
+        /* 文本不进行折行 */
+       }
+       label{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid blueviolet;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+        /* 当鼠标放在label上时会变成手的形状 */
+       }
+      
+    </style>
+</head>
+<body>
+    <div>
+        <div class="main">
+            <input type="radio" name="slider" id="radio-slider1" checked>
+            <!-- 页面加载时，优先加载带有checked的input标签 -->
+            <input type="radio" name="slider" id="radio-slider2">
+            <input type="radio" name="slider" id="radio-slider3">
+            <input type="radio" name="slider" id="radio-slider4">
+            <div class="img">
+                <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/b0c76b21-531b-4af4-a607-cf5672c72ded_product_W572_H370.jpg" alt="">
+                <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/8b36f9a7-f780-4e71-b719-9300109a9ff2_product_W572_H370.jpg" alt="">
+                <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/6d77d0ea-53d0-4518-b7e9-e53795b4920c_product_W572_H370.jpg" alt="">
+                <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="">
+
+            </div>
+            <div class="box">
+                <label for="radio-slider1"></label>
+                <label for="radio-slider2"></label>
+                <label for="radio-slider3"></label>
+                <label for="radio-slider4"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
