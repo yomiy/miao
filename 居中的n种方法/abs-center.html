@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            text-align: center;
+        }
+
+        .inline span{
+            line-height: 100px;
+        }
+        /* 行内元素的水平垂直居中方式(定宽)，设置text-align:center;水平居中
+        line-height=父元素的高度垂直居中 */
+
+        .block{
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+        }
+        .unknown-width{
+            height: 50px;
+            background-color: aqua;
+        }
+        /* 不定宽块级元素的水平居中方式 */
+
+        .picture{
+            width: 400px;
+            height: 200px;
+            background-color: cornsilk;
+            position: relative;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        /* 图片的水平居中方式，将图片设为块或者行内块，然后用
+        margin:0 auto;(块)或者text-align:center;（行内块）进行居中
+
+        图片的水平垂直居中方式1，利用position+transform（不用将元素改变为其他类型的元素）
+        */
+
+        .block2{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .block2 div{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            margin:0 auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        /* 错误写法: 
+            transform: translateX(-50%);
+            transform: translateY(-50%); 
+            和transform: translate(-50%,-50%)代表的不是同一个意义*/
+
+        .margin{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .margin div{
+            width: 50px;
+            height: 50px;
+            background-color: gold;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        /* 利用position+margin:auto; */
+
+        .flex{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex div{
+            width: 50px;
+            height: 50px;
+            background-color: bisque;
+        }
+        /* 利用flex布局 */
+
+        .grid {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid div{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="inline">
+        <span>123</span>
+    </div>
+    <br>
+    <div class="block">
+        <div class="unknown-width">123</div>
+    </div>
+    <br>
+    <div class="picture">
+        <img src="https://img2.baidu.com/it/u=1144329438,2261565768&fm=253&fmt=auto&app=120&f=JPEG?w=888&h=500" alt="">
+    </div>
+    <br>
+    <div class="block2">
+        <div>
+        </div>
+    </div>
+    <br>
+    <div class="margin">
+        <div></div>
+    </div>
+    <br>
+    <div class="flex">
+        <div></div>
+    </div>
+    <br>
+    <div class="grid">
+        <div></div>
+    </div>
+</body>
+</html>
