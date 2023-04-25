@@ -113,20 +113,44 @@
 </script>
 
 <script id="ch0103/16" type="16">
-    var Xa = prompt('请输入Xa')
-    var Ya = prompt('请输入Ya')
-    var Xb = prompt('请输入Xb')
-    var Yb = prompt('请输入Yb')
+    var Xa = +prompt('请输入Xa')
+    var Ya = +prompt('请输入Ya')
+    var Xb = +prompt('请输入Xb')
+    var Yb = +prompt('请输入Yb')
     var AB = Math.sqrt((Xa - Xb)**2 + (Ya - Yb)**2)
     console.log(AB.toFixed(3))
 </script>
 
-<script>
-    var x1 =prompt('x1')
-    var y1 =prompt('y1')
-    var x2 =prompt('x2')
-    var y2 =prompt('y2')
-    var x3 =prompt('x3')
-    var y3 =prompt('y3')
+<script id="ch0103/17" type="17">
+    var x1 = +prompt('x1')
+    var y1 = +prompt('y1')
+    var x2 = +prompt('x2')
+    var y2 = +prompt('y2')
+    var x3 = +prompt('x3')
+    var y3 = +prompt('y3')
+    var S =1/2 * (x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1-x3 * y2)
+    console.log(S.toFixed(2))
+</script>
+
+<script id="ch0103/18" type="18">
+    var a1 = +prompt('a1')
+    var a2 = +prompt('a2')
+    var n = +prompt('n')
+    var d = a2 - a1
+    var an = a1 + (n-1) * d
+    console.log(an)
+</script>
+
+<script id="ch0103/19" type="19">
+    var A = +prompt('A')
+    var B = +prompt('B')
+    var C = A * B
+    console.log(C)
+</script>
+
+<script id="ch0103/20">
+    var n = +prompt('输入一个数')
+    var m = 2**n
+    console.log(m)
 </script>
 
