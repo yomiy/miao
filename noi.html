@@ -154,3 +154,281 @@
     console.log(m)
 </script>
 
+
+<script id="ch0104/01" type="1">
+    var N = +prompt('请输入一个整数')
+    if(N>0){
+        console.log('positive')
+    }
+    else if(N = 0){
+        console.log('zero')
+    }
+    else{
+        console.log('negative')
+    }
+</script>
+
+<script id="ch0104/02" type="2">
+    var num = +prompt('请输入一个浮点数')
+    if(num>0){
+        console.log(num.toFixed(2))
+    }
+    else{
+        console.log(((-1) * num).toFixed(2))
+    }
+</script>
+
+<script id="ch0104/03" type="3">
+    var num = +prompt('请输入一个整数')
+    if(num % 2 === 0){
+        console.log('even')
+    }
+    else{
+        console.log('odd')
+    }
+</script>
+
+<script id="ch0104/04" type="4">
+    var s = prompt('请输入一个ASCII码')
+    s = s.charCodeAt(0)
+    if(s % 2 === 1){
+        console.log('Yes')
+    }
+    else{
+        console.log('No')
+    }
+</script>
+
+<script id="ch0104/05" type="5">
+    var x = +prompt('x')
+    var y = +prompt('y')
+    if(x>y){
+        console.log('>')
+    }
+    else if(x === y){
+        console.log('=')
+    }
+    else{
+        console.log('<')
+    }
+</script>
+
+<script id="ch0104/06" type="6">
+    var x = +prompt('请输入一个正整数')
+    if(x >= 10 && x <= 99){
+        console.log(1)
+    }
+    else{
+        console.log(0)
+    }
+</script>
+
+<script id="ch0104/07" type="7">
+    var a = +prompt('幸运瓶盖的数量')
+    var b = +prompt('鼓励瓶盖的数量')
+    if(a >= 10 || b >= 20){
+        console.log(1)
+    }
+    else{
+        console.log(0)
+    }
+</script>
+
+<script id="ch0104/08" type="8">
+    var n = +prompt('输入一个数')
+    if(n % 3 === 0 && n % 5 === 0){
+        console.log('YES')
+    }
+    else{
+        console.log('NO')
+    }
+</script>
+
+<script id="ch0104/09" type="9">
+    var n = +prompt('输入一个数')
+    if(n % 3 == 0){
+        console.log(3)
+    }
+    if(n % 5 == 0){
+        console.log(5)
+    }
+    if(n % 7 == 0){
+        console.log(7)
+    }
+    if(n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0){
+        console.log('n')
+    }
+</script>
+
+<script id="ch0104/10" type="10">
+    var score1 = +prompt('语文成绩')
+    var score2 = +prompt('数学成绩')
+    if((score1 >= 60 && score2 >= 60) || (score1 < 60 && score2<60)){
+        console.log(0)
+    }
+    else{
+        console.log(1)
+    }
+</script>
+
+<script id="ch0104/11" type="11">
+    var date = +prompt('请输入日期')
+    if(date === 1 || date === 3 || date === 5){
+        console.log('NO')
+    }
+    else{
+        console.log('YES')
+    }
+</script>
+
+<script id="ch0104/12" type="12">
+    var S = +prompt('距离')
+    var Tbike = S / 3 + 50
+    var Twalk = S/(1.2)
+    if(Tbike < Twalk){
+        console.log('Bike')
+    }
+    else{
+        console.log('Walk')
+    }
+</script>
+
+<script id="ch0104/13" type="13">
+    var N = +prompt('输入n')
+    var y
+    if(N >=0 && N < 5){
+        y = (-1) * N + 2.5
+        console.log(y.toFixed(3))
+    }
+    else if(N >= 5 && N < 10){
+        y = 2-1.5*(N - 3)*(N - 3)
+        console.log(y.toFixed(3))
+    }
+    else if(N >= 10 && N < 20){
+        y = N / 2 -1.5
+        console.log(y.toFixed(3))
+    }
+</script>
+
+<script id="ch0104/14" type="14">
+    var weight = +prompt('重量')
+    var urgent = prompt('是否加急')
+    var cost 
+    if(weight <= 1000 && urgent ==='n'){
+        cost = 8
+    }
+    else if(weight <= 1000 && urgent ==='y'){
+        cost = 13
+    }
+
+    else if(weight > 1000 && urgent ==='n'){
+        cost =Math.ceil((weight - 1000) / 500) * 4 +8
+    }
+    else if(weight > 1000 && urgent ==='y'){
+        cost =Math.ceil((weight - 1000) / 500) * 4 + 13
+    }
+    console.log(cost)
+</script>
+
+<script id="ch0104/15" type="15">
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var c = +prompt('c')
+    var max
+   max = a
+    if(max < b){
+        max = b
+    }
+    if(max < c){
+        max = c
+    }
+    console.log(max)
+</script>
+
+<script id="ch0104/16" type="16">
+    var a = +prompt ('a')
+    var b = +prompt ('b')
+    var c = +prompt ('c')
+    if(a + b > c && a + c> b && b + c > a){
+        console.log('Yes')
+    }
+    else{
+        console.log('no')
+    }
+</script>
+
+<script id="ch0104/17" type="17">
+    var year = +prompt('请输入年份')
+    if(year % 4 === 0 && year % 100 !==0 || year % 400 === 0){
+        console.log('Y')
+    }
+    else{
+        console.log('N')
+    }
+</script>
+
+<script id="ch0104/18" type="18">
+    var x = +prompt('x坐标')
+    var y = +prompt('y坐标')
+    if(x >= (-1) && x <= 1 && y >= (-1) && y <= 1){
+        console.log('yes')
+    }
+    else{
+        console.log('no')
+    }
+</script>
+
+<script id="ch0104/19" type="19">
+    var num1 = +prompt('参数1')
+    var num2 = +prompt('参数2')
+    var operate = prompt('操作符')
+    if (operate === '+'){
+        console.log(num1 + num2)
+    }
+    else if(operate === '-'){
+        console.log(num1 - num2)
+    }
+    else if(operate === '*'){
+        console.log(num1 * num2)
+    }
+    else if(operate === '/'){
+        console.log(num1 / num2)
+    }
+    else if(num1 === 0 && operate ==='/'){
+        console.log('Divided by zero!')
+    }
+    else{
+        console.log('Invalid operator!')
+    }
+</script>
+
+<script id="ch0104/20" type="20">
+    var a = +prompt('a')
+    var b = +prompt('b')
+    var c = +prompt('c')
+    var e 
+    var f
+    if(b*b === 4*a*c){
+        e = (-b + Math.sqrt(b*b - 4*a*c)) / (2*a)
+        f = (-b - Math.sqrt(b*b - 4*a*c)) / (2*a)
+    }
+    else if((b*b > 4*a*c) && (e > f)){
+        e = (-b + Math.sqrt(b*b - 4*a*c)) / (2*a)
+        f = (-b - Math.sqrt(b*b - 4*a*c)) / (2*a)
+    }
+    else if(b*b < 4*a*c){
+        e = -b / (2*a) + (Math.sqrt(4*a*c-b*b) / (2*a) + 'i')
+        f = -b / (2*a) - (Math.sqrt(4*a*c-b*b) / (2*a) + 'i')
+    }
+    console.log(e,f)
+</script>
+
+<script id="ch0104/21" type="21">
+    var n = +prompt('苹果的数量')
+    var x = +prompt('虫子吃了x个小时')
+    var y = +prompt('经过y个小时')
+    var m = n - Math.ceil(y/x)
+    console.log(m)
+</script>
+
+
