@@ -577,4 +577,101 @@
     console.log(sum)
 </script>
 
+<script id="ch0105/11" type="11">
+    var k = +prompt('k')
+    var c = 0
+    var c1 = 0
+    var c5 = 0
+    var c10 =0
+    while(c < k){
+        var number = +prompt('正整数')
+        if(number === 1){
+            c1 = c1 + 1
+        }
+        if(number === 5){
+            c5 = c5 + 1
+        }
+        if(number === 10){
+            c10 = c10 + 1
+        }
+        c++
+    }
+    console.log(c1,c5,c10)
+</script>
+
+<script id="ch0105/12" type="12">
+    var N = +prompt('N')
+    var m = +prompt('m')
+    var c = 0
+    var c1 = 0
+    while(c < N){
+        var number = +prompt('数字')
+        if(number === m){
+            c1++
+        }
+        c++
+    }
+    console.log(c1)
+
+</script>
+
+<script id="ch0105/13" type="13">
+    var a = +prompt('a')
+    var n = +prompt('n')
+    var c = 0
+    var involution = 1
+    while(c < n){
+        involution = a * involution
+        c++
+    }
+    console.log(involution)
+</script>
+
+<script id="ch0105/14" type="14">
+    var x = +prompt('我国人口')
+    var n = +prompt('n年后')
+    var number = 1
+    for(var i = 0;i < n;i++){
+        number = number * (1 + 0.001)
+    }
+    var population =(x * number).toFixed(4)
+    console.log(population)
+</script>
+
+<script id="ch0105/15" type="15">
+    var R = +prompt('复合年利率')
+    var M = +prompt('总共的钱')
+    var Y = +prompt('投资Y年')
+    var number = 1
+    var sum = 1
+    for(var i = 0;i < Y;i++){
+        number += number * (R /100)
+    }
+    sum = number * M
+    console.log(Math.floor(sum))
+</script>
+
+<script id="ch0105/16" type="16">
+  var salary = +prompt()
+  var r = +prompt()
+  var ratio = 1 + r / 100
+  var totalSalary = 0
+  var housePrice = 200
+  var buyed = false
+  //年利率
+  for(var i = 1; i < 20; i++){
+    totalSalary += salary
+    if(totalSalary >= housePrice){
+        console.log(i)
+        buyed =true
+        break
+    }
+    housePrice = housePrice * ratio
+  }
+  if(!buyed){
+    console.log('Immpossible')
+  }
+</script>
+
+
 
