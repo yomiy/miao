@@ -810,7 +810,7 @@
     console.log(normal)
 </script>
 
-<script id="ch0105/25">
+<script id="ch0105/25" type="25">
     for(var n = 81;n<=342;n++){
         var a7 = n % 7
         var b7 =(n-a7) / 7 % 7
@@ -818,15 +818,80 @@
         var a9 = n % 9
         var b9 =(n-a9) / 9 % 9
         var c9 = (n - b9 * 9 - a9) / 9 / 9 % 9
-        if(a7 == c9 && b7 == c7 == a9){
+        if(a7 == c9 && b7 == b9 && c7 == a9){
             console.log(n,''+ c7 + b7 + a7,''+ c9 + b9 + a9)
             break
         }
     }
+</script>
+
+<script id="ch0105/26" type="26">
+    var n = +prompt()
+    var count = 0
+    for(var i = 0; i < n; i++){
+        var number = +prompt()
+        var a = number % 10
+        var b = (number - a)/10 % 10
+        var c = (number - a - b*10)/ 100 % 10
+        var d = (number - a - b * 10 -c * 100) / 1000
+        if(a - d - c - b > 0){
+            count++
+        }
+    }
+    console.log(count)
+</script>
+
+<script id="ch0105/27" type="27">
+    var k = +prompt()
+    var total = 0
+    for(var n =1; n < Infinity;n++){
+        total = total + 1 / n
+        if(total > k){
+            console.log(n)
+            break
+        }
+    }
+</script>
+
+<script id="ch0105/28">
+    var n = +prompt()
+    do{
+        var a = n % 10
+        console.log(a)
+        n = (n - a) / 10
+    }while(n>0)
+</script>
+
+<script id="ch0105/29">
+
 
 </script>
 
-<script id="ch0105/17">
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
+
+</script>
+
+<script id="ch0105/26">
 
 </script>
 
