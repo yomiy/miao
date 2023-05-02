@@ -1018,7 +1018,7 @@
     console.log(ones)
 </script>
 
-<script>
+<script id="ch0105/40" type="41">
     var hastwo = function(a){
         var m = 0
         var c = 0
@@ -1041,4 +1041,27 @@
     console.log(sum)
 </script>
 
+<script  id="ch0105/42">
+    var h = +prompt()
+    var w = +prompt()
+    var result = ''
+    var fill = +prompt()
+    //判断是否填充
+    var char = prompt()
+    for(var i = 1; i <= h; i++){
+        for(var j = 1; j <= w; j++){
+            if(j == 1 || j == w || i == 1 || i == h){
+                result += char
+            }
+            else if(fill){
+                result += char
+            }
+            else{
+                result += ' '
+            }
+        }
+        result += '\n'
+    }
+    console.log(result)
+</script>
 
