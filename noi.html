@@ -853,7 +853,7 @@
     }
 </script>
 
-<script id="ch0105/28">
+<script id="ch0105/28" type="28">
     var n = +prompt()
     do{
         var a = n % 10
@@ -862,37 +862,114 @@
     }while(n>0)
 </script>
 
-<script id="ch0105/29">
-
-
-</script>
-
-<script id="ch0105/26">
-
-</script>
-
-<script id="ch0105/26">
-
-</script>
-
-<script id="ch0105/26">
+<script id="ch0105/29" type="29">
+    var n = +prompt()
+    var result = 0
+    while(n > 0){
+        var a = n % 10
+        //个位
+        result = result * 10 + a 
+        n = (n - a) / 10   
+    }
+    console.log(result)
+       
 
 </script>
 
-<script id="ch0105/26">
+<script id="ch0105/30" type="30">
+    var m = +prompt()
+    var k = +prompt()
+    var count = 0
+    var a = m
+    while(m > 0){
+        if(m % 10 === 3){
+            count++
+        }
+        //如果个位数上是三,计数次数加1
+        m = Math.trunc(m / 10)
+        //把个位数刨去
+    }
+    if(count = k && a % 19 === 0){
+            console.log('Yes')
+        }
+        else{
+            console.log('NO')
+        }
 
 </script>
 
-<script id="ch0105/26">
+
+<script id="ch0105/31" type="31">
+    //思路
+    var N = +prompt()
+    var M = +prompt()
+    for(var i = 1; i <= N; i++){
+        var state = true
+        //灯的初始状态为开
+        for(var p = 1; p <= M; p++){
+            if(i % p == 0)
+            state = !state
+        }
+    }
+    if(state == false){
+        console.log(i)
+    }
 
 </script>
 
-<script id="ch0105/26">
+<script id="ch0105/32" type="32">
+    var n = +prompt()
+    var q1 = 2
+    var p1 = 1
+    var sum =0
+    for(var i = 1; i <= n; i++){
+        sum = sum + q1 / p1
+        var p = q1
+        var a = q1 + p1
+        var r =p1
+    }
+    console.log(sum.toFixed(4))
 
 </script>
 
-<script id="ch0105/26">
-
+<script id="ch0105/33" type="33">
+    var n = +prompt()
+    for(var i =1; i<=n; i++){
+        if(i%2 == 0){
+            sum -= 1/i
+        }else{
+            sum += 1/i
+        }
+    }
+    console.log(sum)
 </script>
 
+
+
+<script id="ch0105/34" type="34">
+    var n = +prompt()
+    var m = 1
+    var sum = 0
+    for(var i =1; i <= n; i++){
+        m = m * i
+        //求第i个阶乘
+        sum += m
+        //第i个阶乘累加
+    }
+    console.log(sum)
+</script>
+
+<script id="ch0105/36" type="36">
+    //思路:先计算x的幂,再进行求和
+  var x = +prompt()
+  var n = +prompt()
+  var y = 0
+  var sum =0
+  for(i = 0; i <= n; i++){
+    y = x ** i
+    sum += y
+  }
+  console.log(sum.toFixed(2))
+
+</script>
 
