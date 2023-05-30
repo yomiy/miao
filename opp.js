@@ -1,4 +1,4 @@
-<script>
+
   class Vector{
     Vector(x,y){
       this.x = x
@@ -48,4 +48,3 @@
       return new Complex(real, imag)
     }
   }
-</script>
