@@ -172,3 +172,33 @@ class Queue{
     return this.count
   }
 }
+
+class Myset{
+  constructor(){
+    this._elements = []
+  }
+  add(val){
+    if (!this.has(val)) {
+      this._elements.push(val)
+    }
+  }
+  delete(val){
+    if (this.has(val)) {
+      var idx = this._elements.indexOf(val)
+      this._elements.splice(idx, 1)
+    }
+  }
+  has(val){
+    return this._elements.includes(val)
+  }
+  get size(){
+    return this._elements.length
+  }
+}
+
+class MyMap{
+  constructor(){
+    this._keys = []
+    this._vals = []
+  }
+}
