@@ -175,24 +175,22 @@ class Queue{
 
 class Myset{
   constructor(){
-    this._elements = []
+    this.MyMap = new MyMap()
   }
-  add(val){
-    if (!this.has(val)) {
-      this._elements.push(val)
-    }
+  add(key,val){
+    return this.MyMap.set(key, val)
   }
-  delete(val){
-    if (this.has(val)) {
-      var idx = this._elements.indexOf(val)
-      this._elements.splice(idx, 1)
-    }
+  get(key) {
+    return this.MyMap.get(key)
   }
-  has(val){
-    return this._elements.includes(val)
+  has(key) {
+    return this.MyMap.has(key)
   }
-  get size(){
-    return this._elements.length
+  delete(val) {
+    return this.MyMap.delete(val)
+  }
+  get size() {
+    return this.MyMap.size
   }
 }
 
