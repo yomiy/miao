@@ -135,80 +135,80 @@
     }
   }
 
-class Queue{
-  constructor(){
-    this.head = null
-    this.tail = null
-    this.count = 0
-  }
-  add(val){
-    var ndoe ={
-      val,next:null
+  class Queue{
+    constructor(){
+      this.head = null
+      this.tail = null
+      this.count = 0
     }
-    if(!this.head){
-      this.head = this.tail =node
+    add(val){
+      var ndoe ={
+        val,next:null
+      }
+      if(!this.head){
+        this.head = this.tail =node
+      }
+      this.tail.next = node
+      this.tail = node
+      this.count++
     }
-    this.tail.next = node
-    this.tail = node
-    this.count++
-  }
 
-  pop(){
-    if(!this.head){
-      return
-    }
-    this.count--
-    if(this.head.next == this.tail){
+    pop(){
+      if(!this.head){
+        return
+      }
+      this.count--
+      if(this.head.next == this.tail){
+        var p = this.head.val
+        this.head = this.tail = null
+        return p 
+      }
       var p = this.head.val
-      this.head = this.tail = null
-      return p 
+      this.head = this.head.next
+      return p
     }
-    var p = this.head.val
-    this.head = this.head.next
-    return p
+
+    get size(){
+      return this.count
+    }
   }
 
-  get size(){
-    return this.count
-  }
-}
-
-class Myset{
-  constructor(){
-    this.MyMap = new MyMap()
-  }
-  add(key,val){
-    return this.MyMap.set(key, val)
-  }
-  get(key) {
-    return this.MyMap.get(key)
-  }
-  has(key) {
-    return this.MyMap.has(key)
-  }
-  delete(val) {
-    return this.MyMap.delete(val)
-  }
-  get size() {
-    return this.MyMap.size
-  }
-}
-
-class MyMap{
-  constructor(){
-    this._keys = []
-    this._vals = []
-  }
-  set(key, val){
-    var keyIdx = this._keys.indexOf(key)
-    if (keyIdx >= 0) {
-      this._vals[keyIdx] = val
-    } else {
-      this._keys.push(key)
-      this._vals.push(val)
+  class Myset{
+    constructor(){
+      this.MyMap = new MyMap()
     }
-      return this
+    add(key,val){
+      return this.MyMap.set(key, val)
     }
+    get(key) {
+      return this.MyMap.get(key)
+    }
+    has(key) {
+      return this.MyMap.has(key)
+    }
+    delete(val) {
+      return this.MyMap.delete(val)
+    }
+    get size() {
+      return this.MyMap.size
+    }
+  }
+
+  class MyMap{
+    constructor(){
+      this._keys = []
+      this._vals = []
+    }
+    set(key, val){
+      var keyIdx = this._keys.indexOf(key)
+      if (keyIdx >= 0) {
+        this._vals[keyIdx] = val
+      } else {
+        this._keys.push(key)
+        this._vals.push(val)
+      }
+        return this
+      }
     get(key){
       var keyIdx = this._keys.indexOf(key)
       if (keyIdx >= 0) {
