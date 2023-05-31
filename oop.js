@@ -101,3 +101,74 @@
       return l
     }
   }
+
+  class Stack{
+    constructor(){
+      this.head = null
+      this.count = 0
+    }
+    push(val){
+      var node = {
+        val, next: null
+      }
+      if(!this.head){
+        this.head = node
+      }else{
+        node.next = this.head
+        this.head = node
+      }
+      this.count++
+    }
+
+    pop(){
+      if(!this.head){
+        return undefined
+      }
+      this.count--
+      var p = this.head.val
+      this.head = this.head.next
+      return p
+    }
+
+    get size(){
+      return this.count
+    }
+  }
+
+class Queue{
+  constructor(){
+    this.head = null
+    this.tail = null
+    this.count = 0
+  }
+  add(val){
+    var ndoe ={
+      val,next:null
+    }
+    if(!this.head){
+      this.head = this.tail =node
+    }
+    this.tail.next = node
+    this.tail = node
+    this.count++
+  }
+
+  pop(){
+    if(!this.head){
+      return
+    }
+    this.count--
+    if(this.head.next == this.tail){
+      var p = this.head.val
+      this.head = this.tail = null
+      return p 
+    }
+    var p = this.head.val
+    this.head = this.head.next
+    return p
+  }
+
+  get size(){
+    return this.count
+  }
+}
