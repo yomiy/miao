@@ -158,7 +158,7 @@
         return
       }
       this.count--
-      if(this.head.next == this.tail){
+      if(this.head == this.tail){
         var p = this.head.val
         this.head = this.tail = null
         return p 
@@ -208,7 +208,7 @@
         this._vals.push(val)
       }
         return this
-      }
+     }
     get(key){
       var keyIdx = this._keys.indexOf(key)
       if (keyIdx >= 0) {
