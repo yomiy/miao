@@ -47,7 +47,7 @@ var yomiy = {
     var res = []
     for(var i = 0; i < array.length; i++){
       if(Array.isArray(array[i])){
-        res = res.concat(flatten(array[i]))
+        res = res.push(...array[i])
       }else{
         res.push(array[i])
       }
@@ -68,6 +68,12 @@ var yomiy = {
       return res
     },
     //flattenDepth函数：根据给定的flatten递归减少数组的层级
+    flattenDepth:function(array,depth = 1){
+      for(var i = 0; i < depth; i++){
+        array = array.flat()
+      }
+      return array
+    }
 
 
 
