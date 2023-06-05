@@ -130,6 +130,34 @@ var yomiy = {
         res = res + separator + array[i]
       }
       return res
+    },
+
+    //last函数：获取数组的最后一个元素
+    last:function(array){
+      return array[array.length - 1]
+    },
+
+    //pull函数：给定一个value值，将数组中与value值相同的值删除。
+    pull:function(array,val){
+      var res = []
+      for(var i = 0; i < array.length; i++){
+        if(array[i] !== val){
+          res.push(array[i])
+        }
+      }
+      return res
+    },
+
+    //reverse函数：原地反转一个数组
+    reverse:function(array){
+      var n = array.length
+      for(var i = 0; i < n / 2; i++){
+        var temp = array[i]
+        array[i] = array[n - i - 1]
+        array[n - i - 1] = temp
+      }
     }
+
+    //every函数：
 }
 
