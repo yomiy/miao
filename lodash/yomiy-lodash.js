@@ -60,7 +60,7 @@ var yomiy = {
       var res = []
       for(var i = 0; i < array.length; i++){
         if(array[i] instanceof Array){
-          flattenDeep(array[i])
+          yomiy.flattenDeep(array[i])
         }else{
           res.push(array[i])
         }
@@ -73,9 +73,63 @@ var yomiy = {
         array = array.flat()
       }
       return array
+    },
+    //fromPairs函数：将数组对应的项转换为对象
+    fromPairs:function(pairs){
+      var map = {}
+      for(var item of pairs){
+        map[item[0]] = item[1]
+      }
+      return map
+    },
+
+    //toPairs函数：将对象转换为相应的数组
+
+    //head函数：获取数组的第一个元素
+    head:function(array){
+      if(array.length == 0){
+        return undefined
+      }else{
+        return array[0]
+      }
+    },
+    //indexOf()
+    indexOf:function(array,value,fromIndex = 0){
+      if(fromIndex < 0){
+        fromIndex = fromIndex + array.length
+      }
+      for(var i = fromIndex; i < array.length; i++){
+        if(array[i] == value)
+        return i
+      }
+      return -1
+    },
+
+    //lastIndexOf()
+    lastIndexOf:function(array,value,fromIndex = array.length - 1){
+      for(var i = fromIndex; i > 0; i--){
+        if(array[i] == value){
+          return i
+        }
+      }
+      return -1
+    },
+
+    //initial函数：获取除最后一个元素以外的所有元素
+    initial:function(array){
+      return array.slice(0,array.length - 1)
+    },
+
+    //join函数：将数组以给定的符号拼接
+    join:function(array,separator = ','){
+      let res = array[0]
+      if(array.length < 0 ){
+        return
+      }
+      for(let i = 1; i < array.length; i++){
+        res = res + separator + array[i]
+      }
+      return res
     }
-
-
-
 }
 
