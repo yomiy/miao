@@ -13,7 +13,7 @@ var yomiy = {
   chunk:function(ary,size){
     var res = []
     for(var i = 0; i < ary.length; i += size){
-      result.push(ary.slice(i,i+size))
+      res.push(ary.slice(i,i+size))
     }
     return res
   },
@@ -33,7 +33,10 @@ var yomiy = {
       array[i] = val
     }
     return array
-  }
+  },
   //drop函数
+  drop:function(array,n = 1){
+    return array.slice(n)
+  }
 }
 
