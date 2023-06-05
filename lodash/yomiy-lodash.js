@@ -34,9 +34,26 @@ var yomiy = {
     }
     return array
   },
-  //drop函数
+  //drop函数：从头开始删除n个元素，最终返回新数组
   drop:function(array,n = 1){
     return array.slice(n)
-  }
+  },
+  //findIndex：
+
+  //findLastIndex:
+
+  //flatten:减少一级array的嵌套深度
+  flatten:function(array){
+    var res = []
+    for(var i = 0; i < array.length; i++){
+      if(Array.isArray(array[i])){
+        res = res.concat(flatten(array[i]))
+      }else{
+        res.push(array[i])
+      }
+    }
+    return res
+    }
+
 }
 
