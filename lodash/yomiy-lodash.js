@@ -53,7 +53,22 @@ var yomiy = {
       }
     }
     return res
+    },
+    //flattendeep函数：将数组递归为一个一维数组
+    //思路：遍历整个数组，如果是数组再递归调用，如果不是数组，就将该值传到新数组里
+    flattendeep:function(array){
+      var res = []
+      for(var i = 0; i < array.length; i++){
+        if(array[i] instanceof Array){
+          flattendeep(array[i])
+        }else{
+          res.push(array[i])
+        }
+      }
+      return res
     }
+    //flattenDepth函数：
+
 
 }
 
